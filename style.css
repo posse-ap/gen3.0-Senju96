@@ -1,0 +1,36 @@
+.headerInner{
+  width: 1000px;
+  height: 100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+.headerInner div{
+  margin-left: 10px
+  }
+  
+.logo{
+  margin-right:auto;
+}
+
+.mainInner{
+  width: 950px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.footerInner{
+  text-align: center;
+  margin-top: 50px;
+  padding: 30px;
+}
+
+body{
+  font-family:sans-serif;
+}
