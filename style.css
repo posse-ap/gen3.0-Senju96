@@ -11,6 +11,10 @@
   
 .logo{
   margin-right:auto;
+  height: 27.4px;
+}
+.logo img{
+  height: 100%;
 }
 
 .mainInner{
@@ -18,11 +22,6 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
 }
 
 .footerInner{
