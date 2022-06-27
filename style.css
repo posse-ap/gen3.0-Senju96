@@ -47,11 +47,13 @@
   top: 22.63%;
   bottom: 66.2%;
   display: inline-block;
+  vertical-align: middle;
 }
 
 .text{
 font-weight: 700;
 font-size: 36px;
+vertical-align: middle;
 }
 
 .line-texts{
@@ -65,6 +67,7 @@ font-weight: 700;
 font-size: 14px;
 line-height: 160%;
 letter-spacing: 0.1em;
+width: 700px;
 }
 
 div{display: block;
@@ -90,8 +93,32 @@ body{
   text-align: center;
 }
 
-div p{
+.line-add-link{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: inline-block;
+  color: black;
+}
+
+a {
+  text-decoration:none; 
+}
+
+.btn{
+  position: relative;
+  width: 320px;
+  height: 50px;
+  background-color: white;
+  display: inline-block;
+  border-radius: 98px;
+}
+
+.line-add-img{
+  position: relative;
+  right: 0;
+  top: 0;
 }
 
 div item{
