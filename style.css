@@ -18,10 +18,118 @@
 }
 
 .mainInner{
-  width: 950px;
-  margin: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.line-pic{
+  width: 500px;
+  display: inline-block;
+  background-color: #eff2f5;
+  padding: 50px 10px;
+  border-radius: 24px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.line-pic p {
+  margin: 0;
+  line-height: 22px;
+  color: #0071bc;
+  font-weight: bold;
+}
+
+.line-pic h1 {
+  margin: 0;
+  padding: 0 60px;
+  font-size: 60px;
+  line-height: 80px;
+  text-align: start;
+}
+
+.img-hero {
+  display: inline-block;
+  width: 750px;
+  height: 552px;
+  margin-left: -800px;
+  z-index: 1;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: calc(50% - 50vw);
+  border-radius: 80px 0 0 80px;
+  object-fit: cover;
+}
+
+.mainInner small{
+  position: absolute;
+  bottom: 24px;
+  left: 42px;
+  z-index: 3;
+}
+
+.about-wrapper {
+  margin: 100px auto;
+  max-width: 984px;
+  padding: 0 24px;
+}
+
+.about-title {
+  text-align: center;
+}
+
+.about-title h2 {
+  margin: 0;
+  font-size: 36px;
+  line-height: 54px;
+}
+
+.about-title p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 25.2px;
+  color: #0071bc;
+}
+
+.about-content {
+  margin-top: 40px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.about-img {
+  margin: 0;
+  max-width: 472px;
+  max-height: 312px;
+  width: 50%;
+  height: 100%;
+  margin-right: 40px;
+}
+
+.about-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+.about-text {
+  max-width: 472px;
+  width: 50%;
+  margin: auto;
+  width: 472px;
+  height: 175px;
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 180%;
+  text-align: justify;
 }
 
 .bg-line{
@@ -38,7 +146,11 @@
   display:inline-block;
   mix-blend-mode: normal;
   opacity: 0.9;
-  border-radius: 48px
+  border-radius: 48px;
+  width: 950px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .icon-line{
@@ -119,6 +231,19 @@ a {
   position: relative;
   right: 0;
   top: 0;
+}
+
+.official-link p{
+  font-size: 14px;
+  text-decoration: none;
+  color: #666;
+}
+
+.official-link img{
+  width: 12.5px;
+  height: 12.5px;
+  margin-left: 5px;
+  vertical-align: bottom;
 }
 
 div item{
