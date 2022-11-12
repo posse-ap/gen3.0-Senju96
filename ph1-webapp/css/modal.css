@@ -1,0 +1,315 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* 画面いっぱいに広がるようにする */
+  width: 100%;
+  height: 100vh;
+  /* rgbaを使って60%の黒いオーバーレイにする */
+  background: rgba(0, 0, 0, 0.6);  
+  /* デフォルトでは見えないようにする */
+  opacity: 0;
+  visibility: hidden;
+  /* 表示する際の変化の所要時間 */
+  transition: .3s;
+}
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* モーダルウィンドウの動き */
+.modal {
+  width: 900px;
+  height: 500px;
+  border-radius: 40px;
+  padding: 15px 20px;
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+
+@media screen and (max-width: 768px) {
+  .modal{
+    width: 350px;
+    height: 620px;
+    margin-left: -40px;
+
+  }
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.close-back{
+  margin-top: 5px;
+  padding: 0px 6px;
+  border-radius: 50px;
+  background-color: #f2f2f2;
+}
+
+
+/* モーダルウィンドウの中身 */
+@media screen and (min-width: 769px) {
+  .modal-inner{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* 上二つ */
+.gakushubi{
+  margin-left: 56px;
+}
+.gakushujikan{
+  margin-right: 56px;
+}
+.gakushu-kontetogengo{
+  margin-left: 56px;
+  line-height: 1px;
+}
+.gakushu-textbox{
+  border-radius: 10px;
+  border:none;
+  outline:none;
+  margin-top: -10px;
+  padding: 15px;
+  background: #f2f2f2;
+}
+
+@media screen and (max-width: 768px) {
+  .gakushubi{
+    margin-left: 15px;
+    font-size: 12px;
+  }
+  .gakushujikan{
+    margin-left: 15px;
+    font-size: 12px;
+  }
+  .gakushu-kontetogengo{
+    margin-left: 15px;
+    font-size: 12px;
+    padding-top: 10px;
+  }
+  .gakushu-textbox{
+    width: 300px;
+    height: 5px;
+  }
+}
+
+/* 学習コンテンツと学習言語 */
+.checkbox-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+}
+.checkbox-input {
+  padding: 12px 8px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .checkbox-input{
+    padding: 8px 4px;
+  }
+}
+
+.checkbox-type {
+  margin: 0;
+  width: 0;
+  opacity: 0;
+}
+.checkbox-input:hover{
+  background: rgba(0,0,0,.05);
+  border-radius: 50px;
+}
+/* .input[type="checkbox"]:checked + label{
+  background-color: rgba(0,0,0,.05);
+} */
+.checkbox-type:focus + .checkbox-dummy{
+  transform: scale(1.1);
+}
+.checkbox-type:checked + .checkbox-dummy::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 35%;
+  height: 4px;
+  border-radius: 2px;
+  transform: translate(-6px, 5px) rotateZ(-135deg);
+  transform-origin: 2px 2px;
+  background: #FFFFFF;
+}
+.checkbox-type:checked + .checkbox-dummy::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 4px;
+  border-radius: 2px;
+  transform: translate(-6px, 5px) rotateZ(-45deg);
+  transform-origin: 2px 2px;
+  background: #FFFFFF;
+}
+.checkbox-dummy {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 25px;
+  height: 25px;
+  border: solid 2px transparent;
+  background: rgba(0, 0, 0, .15);
+  border-radius: 50%;
+  transition: all .15s linear;
+}
+
+@media screen and (max-width: 768px) {
+  .checkbox-dummy{
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.checkbox-label {
+  margin-left: 12px;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .checkbox-label{
+    margin-left: 8px;
+  }
+}
+
+
+/* Twitter */
+.twittertachi{
+  margin-right: 56px;
+}
+.twitter-textbox{
+  resize: none;
+  border-radius: 10px;
+  border:none;
+  outline:none;
+  margin-top: -10px;
+  padding: 15px;
+  background: #f2f2f2;
+  line-height: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .twittertachi{
+    margin-left: 15px;
+    font-size: 12px;
+  }
+  .twitter-textbox{
+    width: 300px;
+    height: 60px;
+  }
+}
+
+.twitter-checkbox-input {
+  padding: 12px 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.twitter-checkbox-type {
+  margin: 0;
+  width: 0;
+  opacity: 0;
+}
+.twitter-checkbox-type:focus + .twitter-checkbox-dummy{
+  transform: scale(1.1);
+}
+.twitter-checkbox-type:checked + .twitter-checkbox-dummy {
+  background: rgba(0, 172, 237, 1);
+}
+.twitter-checkbox-type:checked + .twitter-checkbox-dummy::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 35%;
+  height: 4px;
+  border-radius: 2px;
+  transform: translate(-6px, 5px) rotateZ(-135deg);
+  transform-origin: 2px 2px;
+  background: #FFFFFF;
+}
+.twitter-checkbox-type:checked + .twitter-checkbox-dummy::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 4px;
+  border-radius: 2px;
+  transform: translate(-6px, 5px) rotateZ(-45deg);
+  transform-origin: 2px 2px;
+  background: #FFFFFF;
+}
+.twitter-checkbox-dummy {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: solid 2px transparent;
+  background: rgba(0, 0, 0, .15);
+  border-radius: 50%;
+  transition: all .15s linear;
+}
+.twitter-checkbox-label {
+  margin-left: 12px;
+  display: block;
+}
+.inner-btn{
+  display: block;
+  width: 400px;
+  text-align: center;
+  padding: 10px 0;
+  margin: 5px auto 0 auto;
+  background: linear-gradient(to left, #99ccff, #0059b3);
+  border-radius: 50px;
+  color: #FFFFFF;
+  outline: none;
+  transition: 0.3s;
+  cursor: pointer;
+  border: transparent;
+}
+
+@media screen and (max-width: 768px) {
+  .twitter-checkbox-dummy{
+    width: 22px;
+    height: 22px;
+  }
+  .inner-btn{
+    width: 350px;
+  }
+}
+
+.inner-btn:hover{
+  opacity: .8;
+}

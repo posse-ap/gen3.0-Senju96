@@ -1,0 +1,63 @@
+body {
+  background-color: rgb(241, 245, 245);
+}
+.header{
+  width: 100%;
+  height: 64px;
+  display: flex;
+  margin-top: -1%;
+  justify-content: space-between;
+  position: fixed;
+  background-color:#FFFFFF;
+  z-index: 100;
+}
+.logo-week-count{
+  width: 300px;
+  display: flex;
+}
+.logo{
+  height: 20px;
+  padding-top: 25px;
+  padding-left: 40px;
+}
+.week-count{
+  font-size: small;
+  padding-top: 13px;
+  padding-left: 10%;
+  color: rgb(153, 162, 162);
+}
+.button{
+  /* outline: none; */
+  height: 40px;
+  margin-right: 5%;
+  background: linear-gradient(to left, #99ccff, #0059b3);
+  border-radius: 50px;
+  width: 160px;
+  color: #FFFFFF;
+  margin-top: 15px;
+}
+
+
+
+
+
+
+.center{
+  padding-top: 15%;
+  text-align: center;
+}
+.error{
+  color: #f5be58;
+}
+.circle{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #f5be58;
+  margin-left: 600px;
+  margin-top: -40px;
+}
+.bikkuri{
+  color: #FFFFFF;
+  font-size: 45px;
+}

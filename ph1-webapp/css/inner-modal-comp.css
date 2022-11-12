@@ -1,0 +1,23 @@
+.change{
+  display: none;
+}
+
+.comp{
+  padding-top: 15%;
+  text-align: center;
+}
+.awesome{
+  color: #abe47c;
+}
+.circle{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #abe47c;
+  margin-left: 420px;
+  margin-top: -30px;
+}
+.check{
+  color: #FFFFFF;
+  font-size: 45px;
+}

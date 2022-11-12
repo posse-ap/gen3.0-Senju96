@@ -1,0 +1,93 @@
+.inner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* 画面いっぱいに広がるようにする */
+  width: 100%;
+  height: 100vh;
+  /* rgbaを使って60%の黒いオーバーレイにする */
+  background: rgba(0, 0, 0, 0.6);  
+  /* デフォルトでは見えないようにする */
+  opacity: 0;
+  visibility: hidden;
+  /* 表示する際の変化の所要時間 */
+  transition: .3s;
+}
+
+/* モーダルウィンドウの動き */
+.inner-modal {
+  width: 900px;
+  height: 500px;
+  border-radius: 40px;
+  padding: 15px 20px;
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+.inner-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+.inner-modal .inner-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.inner-close-back{
+  margin-top: 5px;
+  padding: 0px 6px;
+  border-radius: 50px;
+  background-color: #f2f2f2;
+}
+
+/* インナーモーダルウィンドウの中身 */
+.load {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  width: 70px;
+  height: 70px;
+}
+
+.load div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.kurukuru {
+  border-top: 5px solid #0059b3;
+  animation: rotate-left 1.2s linear infinite;
+}
+
+/* .two {
+  border-right: 1px solid #2e44ed;
+  animation: rotate-right 1s linear infinite;
+} */
+
+@keyframes rotate-left {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotate-right {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
