@@ -1,0 +1,353 @@
+body {
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+.container {
+  padding-top: 80px;
+}
+
+/* スクロールしてもついてくるとこ--------------------------------------------------------------- */
+.header{
+  width: 100%;
+  height: 12%;
+  margin-top: -9px;
+  background: #ffffff;
+  position: fixed;
+  z-index: 100;
+}
+.top{
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+}
+.logo{
+  margin-left: -200px;
+  margin-top: -20px;
+}
+.nav-text{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  width: 350px;
+  list-style: none;
+}
+.nav-icon{
+  list-style: none;
+  display: flex;
+}
+.icon{
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px solid #eeeeee;
+  font-size: 24px;
+  color: #adadad;
+}
+
+
+/* big-picture------------------------------------------------------------------------------- */
+.big-picture{
+  background-size: cover;
+  width: 100%;
+  height: 250px;
+}
+.title{
+  margin-top: -15%;
+  margin-left: 15%;
+  color: #FAFAFA;
+}
+.title-main{
+  font-size: 14px;
+}
+.title-sub{
+  font-size: 45px;
+}
+
+
+/* クイズ--------------------------------------------------------------------------- */
+.l-container {
+  margin-top: 120px;
+  margin-left: 180px;
+  max-width: 950px;
+}
+.quiz-q {
+  background-color: #0071bc;
+  border-radius: 8px;
+  color: #fff;
+  display: inline-block;
+  font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 8px 16px;
+}
+.quiz-a {
+  background-color: #e34e70;
+  border-radius: 8px;
+  color: #fff;
+  display: inline-block;
+  font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 8px 16px;
+}
+.quiz-question {
+  display: block;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-top: 24px;
+}
+.quiz-img{
+  width: 680px;
+  margin-top: 40px;
+  margin-left: 120px;
+}
+.quiz-answer {
+  margin-top: 64px;
+}
+.quiz-answer-list{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: -40px;
+  list-style:none;
+}
+.quiz-answer-button {
+  align-items: center;
+  border: solid 5px #eee;
+  border-radius: 8px;
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 35px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+  width: 100%;
+  background: #FFFFFF;
+}
+.arrow{
+  margin-top: 8px;
+  margin-left: 130px;
+  cursor: pointer;
+}
+/* .quiz-answer-button .u-icon__arrow {
+  font-size: 16px;
+  margin-left: auto;
+} */
+/* .quiz-answer-button:disabled .u-icon__arrow {
+  display: none;
+} */
+.quiz-answer-button.is-selected {
+  background-color: #eff2f5;
+  border-color: #0071bc;
+}
+/* .quiz-answer-button.is-selected .u-icon__arrow {
+  display: none;
+}  */
+.quiz-answer-push {
+  background-color: #fff2f5;
+  border-radius: 8px;
+  display: none;
+  margin-top: 16px;
+  padding: 24px 40px;
+}
+.quiz-answer-push.is-correct {
+  display: block;
+}
+.quiz-answer-push.is-incorrect {
+  background-color: #eff2f5;
+  display: block;
+}
+.quiz-answer-push-ox {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+.is-correct .quiz-answer-push-ox {
+  color: #e34e70;
+}
+.is-incorrect .quiz-answer-push-ox {
+  color: #0071bc;
+}
+.quiz-answer-push-ox-content {
+  align-items: baseline;
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  gap: 18px;
+  line-height: 1.8;
+  margin-top: 16px;
+}
+.quiz-answer-push-a {
+  font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+  font-size: 24px;
+}
+.quiz-note {
+  width: 900px;
+  margin-left: 0px;
+  align-items: center;
+  background-color: #f6f6f6;
+  border-radius: 8px;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 24px;
+}
+
+
+
+/* ここからーーーーーーーーーーーーーー */
+.u-icon__link:before {
+  content: "\e901";
+}
+.u-icon__note:before {
+  content: "\e902";
+}
+
+.u-icon__line:before {
+  background: radial-gradient(#fff 60%, transparent 60%);
+  color: #00c300;
+  content: "\e900";
+}
+
+
+.l-footer {
+  border-top: solid 1px #eee;
+}
+.l-footer__inner {
+  padding: 56px 24px 48px;
+}
+.p-footer {
+  margin-top: 80px;
+  text-align: center;
+}
+.p-footer__logo {
+  display: block;
+}
+.p-footer__siteinfo__link {
+  color: #666;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-top: 24px;
+}
+.p-footer__sns__list {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 32px;
+}
+.p-footer__copyright {
+  border-top: solid 1px #eee;
+  color: #666;
+  font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  padding: 38px 24px 33px;
+}
+.p-heading {
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  text-align: center;
+}
+.p-heading.-light {
+  color: #fff;
+}
+.p-heading__caption {
+  color: #0071bc;
+  display: block;
+  font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  letter-spacing: initial;
+  line-height: 1.8;
+  margin-top: 8px;
+}
+.p-sns {
+  display: flex;
+  gap: 16px;
+}
+.p-sns__item__link {
+  align-items: center;
+  border: solid 1px #eee;
+  border-radius: 50%;
+  color: #adadad;
+  display: inline-flex;
+  font-size: 24px;
+  height: 50px;
+  justify-content: center;
+  width: 50px;
+}
+
+.p-line {
+  margin-top: 144px;
+}
+.p-line__body {
+  background: url(../img/bg-line.jpg) center center/cover;
+  border-radius: 56px;
+  overflow: hidden;
+  padding: 68px;
+  position: relative;
+}
+.p-line__body::before {
+  background-color: rgba(0, 113, 188, 0.9);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.p-line__body__inner {
+  position: relative;
+}
+.p-line__title {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+.p-line__title .u-icon__line {
+  font-size: 40px;
+}
+.p-line__content {
+  color: #eee;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  margin-top: 16px;
+  text-align: center;
+}
+.p-line__footer {
+  margin-top: 16px;
+  text-align: center;
+}
+.p-line__button {
+  background-color: #fff;
+  border-radius: 50px;
+  color: #333;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  max-width: 320px;
+  padding: 12px;
+  position: relative;
+  width: 100%;
+}
+.p-line__button .u-icon__link {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
